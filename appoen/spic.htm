@@ -1,0 +1,49 @@
+<script language=JavaScript>
+var flag=false;
+function DrawImage(ImgD){
+   var image=new Image();
+   image.src=ImgD.src;
+   if(image.width>0 && image.height>0){
+    flag=true;
+    if(image.width/image.height>= 120/80){
+     if(image.width>120){  
+     ImgD.width=120;
+     ImgD.height=(image.height*120)/image.width;
+     }else{
+     ImgD.width=image.width;  
+     ImgD.height=image.height;
+     }
+     ImgD.alt=image.width+"°¡"+image.height;
+     }
+    else{
+     if(image.height>80){  
+     ImgD.height=80;
+     ImgD.width=(image.width*80)/image.height;     
+     }else{
+     ImgD.width=image.width;  
+     ImgD.height=image.height;
+     }
+     ImgD.alt=image.width+"°¡"+image.height;
+     }
+    }
+   /*else{
+    ImgD.src="";
+    ImgD.alt=""
+    }*/
+   } 
+
+function FileChange(Value){
+flag=false;
+document.all.uploadimage.width=10;
+document.all.uploadimage.height=10;
+document.all.uploadimage.alt="";
+document.all.uploadimage.src=Value;
+}
+
+function BeforeUpLoad(){
+if(flag) alert("OK");else alert("FAIL");
+}
+</script>
+<INPUT style="WIDTH: 143px; HEIGHT: 18px" type=file size=8 name=pic onchange="javascript:FileChange(this.value);"> 
+<IMG id=uploadimage height=10 width=10 src=""  onload="javascript:DrawImage(this);" ><BR>
+<Button onclick="javascript:BeforeUpLoad();">Ã·Ωª</Button>

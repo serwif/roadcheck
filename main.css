@@ -1,0 +1,100 @@
+SELECT
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt
+}
+BODY
+{
+    FONT-FAMILY: "宋体", "Arial", "Verdana", "Tahoma";
+    FONT-SIZE: 9pt
+}
+TD
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt
+}
+P
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 9pt
+}
+LI
+{
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 11pt
+}
+INPUT.smallInput1
+{
+    FONT-SIZE: 8pt
+}
+INPUT.smallInput
+{
+    FONT-SIZE: 9pt
+}
+TEXTAREA.smallarea
+{
+    BACKGROUND-COLOR: white;
+    COLOR: #000080;
+    FONT-SIZE: 9pt
+}
+INPUT.buttonface
+{
+    BACKGROUND-COLOR: white;
+    FONT-SIZE: 9pt
+}
+A
+{
+    COLOR: navy;
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none
+}
+A
+{
+    COLOR: #000000;
+    FONT-SIZE: 9pt
+}
+.small
+{
+    FONT-SIZE: 9pt
+}
+A:hover
+{
+    COLOR: #330099;
+    FONT-SIZE: 9pt
+}
+.nava
+{
+    FONT-SIZE: 11pt;
+    FONT-WEIGHT: normal;
+    LINE-HEIGHT: 15pt
+}
+
+.PageBreak {
+  page-break-after: always;
+}
+.printhead
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 22pt
+}
+.printtext
+{
+    FONT-FAMILY: 宋体;
+    FONT-SIZE: 12pt
+}
+.topfont
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 12pt;
+    COLOR: white;
+    FONT-WEIGHT:BOLDER;
+    TEXT-DECORATION:UNDERLINE
+}
+.topfont1
+{
+    FONT-FAMILY: "宋体";
+    FONT-SIZE: 12pt;
+    COLOR: red;
+    FONT-WEIGHT:BOLDER;
+    TEXT-DECORATION:UNDERLINE
+}

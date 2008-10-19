@@ -1,0 +1,182 @@
+<html>
+
+<body>
+
+ 
+
+<script language="javascript">
+
+<!--
+
+theUniqueID = (new Date()).getTime() % 1000000000;
+
+function s()    //让数据提交的同时执行显示进度条的函数
+
+{
+
+       bar();      //开始执行反映上传情况的函数
+
+       document.myform.action = "progressupload.asp?ID=" + theUniqueID;  //处理上传数据的程序
+
+       document.myform.target="up"  //将提交的数据放在一个名字是up隐藏的iframe里面处理，这样提交的页面就不会跳转到处理数据的页
+
+       document.myform.submit();     //提交表单
+
+ 
+
+ 
+
+}
+
+function bar()
+
+{
+
+       bar1.style.display='';  //让显示上传进度显示的层的可见
+
+       var timeoutid=null;        //这个变量是作定时器的ID
+
+    var oXMLDoc = new ActiveXObject('MSXML');             //创建'MSXML'对象
+
+    sURL = "progressbar.asp?ID=" + theUniqueID + "&temp="+Math.random();      //获取上传状态数据的地址
+
+    oXMLDoc.url = sURL;     //load数据
+
+    var oRoot=oXMLDoc.root;     //获取返回xml数据的根节点
+
+    if(oRoot.children != null)  
+
+    {
+
+              if (oRoot.children.item(0).text-100==0)              //文件上传结束就取消定时器
+
+                     clearTimeout(timeoutid)
+
+              PercentDone.style.width=oRoot.children.item(0).text+"%";         //设置进度条的百分比例
+
+              //根据返回的数据在客户端显示
+
+              min.innerHTML=oRoot.children.item(1).text;       //显示剩余时间（分钟）
+
+              secs.innerHTML=oRoot.children.item(2).text;       //显示剩余时间（秒钟）
+
+              BytesDone.innerHTML=oRoot.children.item(3).text;    //已上传数据大小
+
+              BytesTotal.innerHTML=oRoot.children.item(4).text;    //总大小
+
+              BytesPerSecond.innerHTML=oRoot.children.item(5).text; //传输速率
+
+              Information.innerHTML=oRoot.children.item(6).text;          //上传信息
+
+    }
+
+       if (oRoot.children.item(0).text-100<0)  //只要文件没有传完，就每隔多少时间获取一次数据
+
+              timeoutid = setTimeout("bar()",50)      //这里设定时间间隔是0.05秒，你也可以根据你的情况修改获取数据时间间隔
+
+}
+
+//-->
+
+</script>
+
+ 
+
+<form name="myform" method="post" action="progressupload.asp" enctype="multipart/form-data" target=up>
+
+<input type="file" name="filefield1"><br>
+
+<input type="button" name="dosubmit" value="Upload" onclick="s()"><br>
+
+<div id=bar1 style="display:none">
+
+<table border="0" width="100%">
+
+  <tr>
+
+    <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2"><b>传送:</b></font></td>
+
+  </tr>
+
+  <tr bgcolor="#999999">
+
+    <td>
+
+      <table border="0" width="" cellspacing="1" bgcolor="#0033FF" id=PercentDone>
+
+        <tr>
+
+          <td><font size=1>&nbsp;</font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td>
+
+      <table border="0" width="100%">
+
+        <tr>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1">剩余时间:</font></td>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+                 <span id=min></span> 分  
+
+              <span id=secs></span> 秒 
+
+              (<span id=BytesDone></span> KB of 
+
+              <span id=BytesTotal></span> KB 已上传)</font></td>
+
+        </tr>
+
+        <tr>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+              传送速度:</font></td>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1">
+
+              <span id=BytesPerSecond></span> KB/秒</font></td>
+
+        </tr>
+
+        <tr>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1">信息:</font></td>
+
+          <td><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><span id=Information></span></font></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+  <tr></tr>
+
+</table>
+
+</div>
+
+<iframe name="up" style="display:none"></iframe>
+
+</form>
+
+ 
+
+</body>
+
+</html>
+
