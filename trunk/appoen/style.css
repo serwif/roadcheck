@@ -1,0 +1,130 @@
+<style>
+.textb	{border-color: #999999  #999999  #999999  #999999; 
+		font-size: 9pt; 
+		background-color: #F6F6F6; 
+		border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px; cursor: hand}
+.submit		{background-color: #F6F6F6; 
+			height: 18px; 
+			border-color: #999999  #999999  #999999  #999999; 
+			clip: rect(   ); 
+			font-size: 9pt; 
+			border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; cursor: hand}
+
+TD			{COLOR: #444444; FONT-SIZE: 9pt; LINE-HEIGHT: 150%}
+A:visited	{COLOR: #9E9E8A}
+A:link		{COLOR: #444444}
+A:hover		{COLOR: #393F79}
+
+input		{background-color: #F6F6F6; HEIGHT: 20px; POSITION: relative;font-size:9pt; border: 1 solid #999999}
+TEXTAREA	{font-size:9pt;background-color: #F6F6F6;border: 1 solid}
+select		{background-color: #F6F6F6; FONT-SIZE: 9pt}
+.TableLine	{border-collapse: collapse}
+
+/*头部第一行文字*/
+.TOP1	    {font-size: 9pt; color: #FFFFFF; text-decoration:none;}
+.TOP1:link     {color: #FFFFFF}
+.TOP1:visited  {color: #FFFFFF}
+.TOP1:hover    {color: #FFCD00}
+
+/*头部第三行文字*/
+.TOP3		{font-size: 9pt; color: #FFFFFF; text-decoration:none;}
+.TOP3:link	     {color: #FFFFFF}
+.TOP3:visited   {color: #FFFFFF}
+.TOP3:hover     {color: #FFFFFF}
+
+/*头部第四行文字*/
+.TOP4 	    {COLOR: #FFFFFF; FONT-SIZE: 12px; }
+.TOP4:link     {COLOR: #FFFFFF}
+.TOP4:visited  {COLOR: #FFFFFF}
+.TOP4:hover    {COLOR: #E6F9FF}
+
+/*左栏标题文字*/
+.LeftTitle	         {font-size: 9pt; COLOR: #000000}
+.LeftTitle:link     {COLOR: #000000}
+.LeftTitle:visited  {COLOR: #000000}
+.LeftTitle:hover    {COLOR: #FFFF00}
+
+/*左栏内容文字*/
+.LeftContent	{font-size: 9pt; COLOR: #222222}
+.LeftContent:link     {COLOR: #222222}
+.LeftContent:visited  {COLOR: #9E9E8A}
+.LeftContent:hover    {COLOR: #FF0000}
+
+/*左栏目录文字*/
+.LeftMenu	        {COLOR: #222222; FONT-SIZE: 12px; filter: DropShadow(Color=#cccccc, OffX=1, OffY=1, Positive=1);text-decoration: none}
+.LeftMenu:link     {COLOR: #222222}
+.LeftMenu:visited  {COLOR: #222222}
+.LeftMenu:hover    {COLOR: #FF0000}
+
+/*左栏“更多”文字*/
+.LeftMore	        {font-size: 9pt; COLOR: #222222}
+.LeftMore:link     {COLOR: #222222}
+.LeftMore:visited  {COLOR: #222222}
+.LeftMore:hover    {COLOR: #FFFF00}
+
+/*主栏标题文字*/
+.MainTitle         {COLOR: #222222; FONT-SIZE: 12px; filter: DropShadow(Color=#cccccc, OffX=1, OffY=1, Positive=1)}
+
+/*主栏内容小号文字*/
+.MainContentS          {COLOR: #222222; FONT-SIZE: 12px; line-height: 140%}
+.MainContentS:link     {COLOR: #222222}
+.MainContentS:visited  {COLOR: #9E9E8A}
+.MainContentS:hover    {COLOR: #FF0000;text-decoration: none}
+
+/*主栏内容大号文字*/
+.MainContentB	  {FONT-SIZE: 14.9px; COLOR: #222222; LINE-HEIGHT: 140%}
+.MainContentB:link     {COLOR: #222222}
+.MainContentB:visited  {COLOR: #9E9E8A}
+.MainContentB:hover    {COLOR: #FF0000}
+
+/*主栏“更多”文字*/
+.MainMore	        {COLOR: #222222; FONT-SIZE: 12px;text-decoration: none}
+.MainMore:link     {COLOR: #9E9E8A}
+.MainMore:visited  {COLOR: #9E9E8A}
+.MainMore:hover    {COLOR: #FF0000}
+
+/*右栏标题文字*/
+.RightTitle          {COLOR: #000000; FONT-SIZE: 12px}
+.RightTitle:link     {COLOR: #000000}
+.RightTitle:visited  {COLOR: #222222}
+.RightTitle:hover    {COLOR: #FF0000}
+
+/*右栏内容文字*/
+.RightContent	  {COLOR: #222222; FONT-SIZE: 12px}
+.RightContent:link     {COLOR: #222222}
+.RightContent:visited  {COLOR: #9E9E8A}
+.RightContent:hover    {COLOR: #FF0000}
+
+/*右栏“更多”文字*/
+.RightMore	         {COLOR: #FF0000; FONT-SIZE: 12px}
+.RightMore:link     {COLOR: #FF0000}
+.RightMore:visited  {COLOR: #FF0000}
+.RightMore:hover    {COLOR: #FFCC00}
+
+/*下栏文字*/
+.bottom		{COLOR: #FFFFFF; FONT-SIZE: 12px}
+.bottom:link 	{COLOR: #FFFFFF}
+.bottom:visited 	{COLOR: #FFFFFF}
+.bottom:hover  	{COLOR: #FF0000}
+
+/*新闻浏览页标题文字*/
+.READNEWSTITLE	{font-size: 18px; line-height: 150%; color: #000000; filter:DropShadow(Color=#cccccc, OffX=1, OffY=1, Positive=1)}
+
+/*新闻浏览页日期来源文字*/
+.NEWSREADME	{font-size:12px; COLOR: #9E9E8A;line-height:14pt;}
+
+/*新闻浏览页内容文字*/
+.NEWS		{font-size:14.8px; COLOR: #222222;line-height:16pt;}
+
+/*新闻浏览页分页文字*/
+.NEWSPAGE		{COLOR: #222222; FONT-SIZE: 12px}
+.NEWSPAGE:link 	{COLOR: #222222}
+.NEWSPAGE:visited 	{COLOR: #9E9E8A}
+.NEWSPAGE:hover  	{COLOR: #FF0000;text-decoration: none}
+
+/*分类后的说明文字*/
+.TitleMore		{COLOR: #9E9E8A; FONT-SIZE: 12px}
+
+/*无下划线的文字*/
+.noline         {FONT-SIZE: 9pt;text-decoration: none}
+</style>
